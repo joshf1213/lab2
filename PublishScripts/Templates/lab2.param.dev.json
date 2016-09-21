@@ -1,0 +1,29 @@
+{
+  "siteName": {
+    "value": "lab2joshfriedman"
+  },
+  "hostingPlanName": {
+    "value": "ServicePlane898bca5-af4c"
+  },
+  "siteLocation": {
+    "value": "South Central US"
+  },
+  "sku": {
+    "value": "Free"
+  },
+  "workerSize": {
+    "value": "0"
+  },
+  "siteMode": {
+    "value": "Limited"
+  },
+  "computeMode": {
+    "value": "0"
+  },
+  "subscriptionId": {
+    "value": "42aa9448-9006-4939-bf3f-415a06cc1f42"
+  },
+  "resourceGroup": {
+    "value": "josh"
+  }
+}
