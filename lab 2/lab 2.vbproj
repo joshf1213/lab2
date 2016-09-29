@@ -124,9 +124,9 @@
   <ItemGroup>
     <Content Include="index.html" />
     <Content Include="lab1.html" />
-    <Content Include="\\ac.stockton\root\userhome\friedm23\Documents\!WEB APP ENGINEERING\lab3\lab3.html">
-      <Link>lab3.html</Link>
-    </Content>
+    <Content Include="lab3.html" />
+    <Content Include="lab3.js" />
+    <Content Include="pizza-clipart-pizza-clipart-tags-kawaii-clipart.png" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
     <Content Include="styles.css" />

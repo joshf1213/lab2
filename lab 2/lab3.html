@@ -1,18 +1,22 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <title>Lab3</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="styles/css/bootstrap.css" rel="stylesheet">
 
-    <title>Lab3</title>
-	<meta charset="utf-8" />
+    <script src="lab3.js"></script>
 </head>
-<div class="container">
-    <body>
-        <div class="jumbotron">
-            <header>
-                <h1>Create a Pizza</h1>
-            </header>
-        </div>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="jumbotron">
+                <h1>Create a Pizza</h1><img src="pizza-clipart-pizza-clipart-tags-kawaii-clipart.png" height="100" width="100" alt="pizza slice" />
+            </div>
+        </header>
 
         <section>
             <h3>Name</h3>
@@ -23,37 +27,38 @@
             <input type="number" id="quantity" min="1" max="10" step="1" value="1" />
         </section>
         <h3>Size</h3>
-        <select name="select">
+        <select id="select">
             <option value="6">Small $6</option>
-            <option value="12">Medium $12</option>
+            <option value="12" selected>Medium $12</option>
             <option value="18">Large $18</option>
             <option value="23">Extra-Large $23</option>
         </select>
         <section>
             <h3>Toppings ($2 each):</h3>
-            <ul style="list-style-type:none">
-                <li><input type="checkbox" name="topping" value="8" onchange="myFunction(this.value)">All</li>
-                <li><input type="checkbox" name="topping" value="2" onchange="myFunction(this.value)">Pepperoni</li>
-                <li><input type="checkbox" name="topping" value="2" onchange="myFunction(this.value)">Cheese</li>
-                <li><input type="checkbox" name="topping" value="2" onchange="myFunction(this.value)">Mushrooms</li>
-                <li><input type="checkbox" name="topping" value="2" onchange="myFunction(this.value)">Tofu</li>
-            </ul>
+
+            <input class="messageCheckbox" type="checkbox" id="checkall" onchange="checkAll(this)" value="0">All<br />
+
+            <input class="messageCheckbox" type="checkbox" name="topping" value="2">Pepperoni<br />
+            <input class="messageCheckbox" type="checkbox" name="topping" value="2">Cheese<br />
+            <input class="messageCheckbox" type="checkbox" name="topping" value="2">Mushrooms<br />
+            <input class="messageCheckbox" type="checkbox" name="topping" value="2">Tofu<br />
+
         </section>
         <section>
-            <button onclick="myFunction()">Submit</button>
-        </section>
+            <button id="button" onclick="reciept()">Submit Order</button>
+            <input type="button" value="New Order" onClick="window.location.reload()">
 
-        <script>
-            function myFunction(val) {
-                var customerName = document.getElementById('name');
-                var pizzaQuant = document.getElementById('quantity');
-                var pizzaSize = document.getElementsByName('select');
-                var pizzaTopping = document.getElementsByName('topping');
-                document.getElementById("receipt").innerHTML = "Thank you for your order " + customerName;
-            }
-           
-        </script>
-        <p id="receipt"></p>
-    </body>
+        </section>
+        <div>
+            <h1 id="header"></h1>
+            <h2 id="recieptNm" type="text"></h2>
+            <h3 id="total"></h3>
+
+
+        </div>
+
+
     </div>
+</body>
+   
 </html>
